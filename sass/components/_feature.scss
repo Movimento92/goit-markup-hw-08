@@ -1,6 +1,11 @@
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .feature__container {
@@ -19,7 +24,17 @@
   margin-bottom: 0px;
   font-weight: 700;
   text-align: left;
-  display: flex;
+
+  @media (min-width: 768px) {
+    @include Flex(flex, baseline, space-between);
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1200px) {
+    @include Flex(flex, center, none);
+    text-align: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .feature__text {
@@ -58,6 +73,12 @@
     background-size: none;
     background-position: center;
   }
+  @media (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media (min-width: 1200px) {
+    min-width: 270px;
+  }
 
   &.antenna::before {
     background-image: url(../img/icon/antenna.svg);
@@ -73,5 +94,12 @@
 
   &.astronaut::before {
     background-image: url(../img/icon/astronaut.svg);
+  }
+
+  @media (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media (min-width: 1200px) {
+    min-width: 270px;
   }
 }

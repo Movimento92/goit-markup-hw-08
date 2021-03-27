@@ -1,6 +1,11 @@
 .clients__section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__container {
@@ -21,6 +26,12 @@
   margin-bottom: 50px;
   margin-left: 0;
   margin-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
@@ -33,6 +44,21 @@
   margin-top: 16px;
   margin-bottom: 0px;
   fill: currentColor;
+
+  @media (min-width: 1200px) {
+    @include Flex(flex, center, none);
+    text-align: center;
+    flex-wrap: nowrap;
+    fill: currentColor;
+  }
+
+  & :not(:last-of-type) {
+    margin-bottom: 0px;
+  }
+
+  & :not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .clients__link {
@@ -60,19 +86,37 @@
   &:active {
     fill: transparent;
   }
+
+  @media (min-width: 768px) {
+    max-width: 226px;
+  }
+  @media (min-width: 1200px) {
+    width: 170px;
+    height: 90px;
+  }
 }
 
 .clients__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+
   height: 90px;
   color: $clients;
   border-radius: 4px;
   margin-left: 0;
   cursor: pointer;
   margin-right: 30px;
+
+  width: calc((100% - 30px) / 2);
+  @media (min-width: 768px) {
+    width: calc((100% - 30px) / 3);
+    @media (min-width: 1200px) {
+      @include Flex(flex, center, center);
+      width: 170px;
+      height: 90px;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
