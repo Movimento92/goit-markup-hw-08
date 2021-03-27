@@ -1,0 +1,213 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color: $white-text;
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal__close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 8px;
+  bottom: 93%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $white-text;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  &:focus,
+  &:hover {
+    fill: $blue-text;
+  }
+}
+
+.modal-form__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: $FontSize20;
+  line-height: $LineHeight23;
+  text-align: center;
+  letter-spacing: $LetterSpacing03;
+  margin-bottom: 12px;
+}
+
+/* form-info__input */
+
+.form-info {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &:focus > .form-info__textarea,
+  &:hover > .form-info__textarea {
+    border: 1px solid $blue-text;
+  }
+}
+
+.form-info label {
+  margin-bottom: 4px;
+  color: $grey-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $FontSize12;
+  line-height: $LineHeight14;
+  letter-spacing: $LetterSpacing01;
+}
+
+.form-info__conteiner {
+  content: '';
+  position: relative;
+}
+
+.form-info__input {
+  border: 1px solid $border-modal;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 35px;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  transition-property: border;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $blue-text;
+  }
+
+  &:focus + .form-info__icon,
+  &:hover + .form-info__icon {
+    fill: $blue-text;
+  }
+}
+
+.form-info__icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.form-info__textarea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid $border-modal;
+  color: $grey-opa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $FontSize14;
+  line-height: $LineHeight16;
+  letter-spacing: $LetterSpacing01;
+  cursor: pointer;
+  outline: none;
+}
+
+.container-checkbox {
+  margin-bottom: 30px;
+  color: $grey-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $FontSize14;
+  line-height: $LineHeight24;
+  letter-spacing: $LetterSpacing03;
+  text-align: center;
+}
+
+.checkbox__text {
+  display: flex;
+  text-decoration-line: underline;
+  color: $blue-text;
+}
+
+.checkbox__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkbox__icon {
+  display: inline-block;
+  margin-right: 9px;
+  border: 2px solid $black-text;
+  border-radius: 2px;
+  fill: $white-text;
+}
+
+.checkbox__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  transition: background-color $time $cubic;
+
+  &:checked ~ .checkbox__icon {
+    background-color: $blue-text;
+
+    background-size: contain;
+    border-color: $blue-text;
+    border-radius: 2px;
+    fill: $blue-text;
+  }
+}
+
+.checkbox__button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: $FontSize16;
+  line-height: $LineHeight30;
+  width: 200px;
+  height: 50px;
+  margin: 30px 125px 29px 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0;
+  letter-spacing: $LetterSpacing06;
+  color: $white-text;
+  background-color: $blue-text;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
+  &:focus,
+  &:hover {
+    background-color: $checkbox__button;
+  }
+}

@@ -1,0 +1,140 @@
+.header {
+  background-color: $white-text;
+  border-bottom: solid 1px #ececec;
+  align-items: baseline;
+  display: flex;
+}
+
+.header__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: baseline;
+  display: flex;
+}
+
+.navigation {
+  align-items: baseline;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: $FontSize26;
+  line-height: $LineHeight31;
+  color: $blue-text;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  margin-right: auto;
+}
+
+.logo__text {
+  color: $black-text;
+}
+
+.web-white {
+  color: $white-text;
+}
+
+.navigation-list {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  align-items: baseline;
+  margin-right: 250px;
+
+  & .current {
+    position: relative;
+    color: $blue-text;
+    transition: fill $time $cubic;
+  }
+
+  & .current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $blue-text;
+    border-radius: 2px;
+    transition: fill $time $cubic;
+  }
+}
+
+.navigation__link {
+  color: $black-text;
+  font-weight: 500;
+  font-size: $FontSize14;
+  line-height: $LineHeight16;
+  letter-spacing: $LetterSpacing02;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  transition: color $time $cubic;
+
+  &:hover,
+  &:focus {
+    color: $blue-text;
+    background: $white-text;
+  }
+}
+
+.navigation__item {
+  align-items: baseline;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+/* adress */
+
+.header-contacts {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition-property: color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.header__link {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  color: $grey-text;
+  font-weight: 500;
+  font-size: $FontSize14;
+  line-height: $LineHeight16;
+  letter-spacing: $LetterSpacing02;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  transition-property: color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
+  &:hover,
+  &:focus {
+    color: $blue-text;
+  }
+}
+
+.header__item {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    fill: $blue-text;
+  }
+}

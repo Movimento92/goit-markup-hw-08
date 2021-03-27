@@ -1,0 +1,203 @@
+.footer {
+  background-color: $back-grey;
+  color: $white-text;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: baseline;
+}
+
+.footer__logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: $FontSize26;
+  line-height: $LineHeight31;
+  color: $white-text;
+  margin-bottom: 20px;
+}
+
+.footer__logo--studio {
+  color: $blue-text;
+}
+
+.address__link {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $FontSize14;
+  line-height: $LineHeight24;
+  letter-spacing: $LetterSpacing03;
+  color: $white-text;
+  text-align: left;
+  margin-bottom: 9px;
+}
+
+.adress__list {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.footer__contacts {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $FontSize14;
+  line-height: $LineHeight24;
+  letter-spacing: $LetterSpacing03;
+  color: $grey-text-op60;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__join {
+  margin-left: 70px;
+}
+
+.connect-text {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $FontSize14;
+  line-height: $LineHeight16;
+  letter-spacing: $LetterSpacing03;
+  text-transform: uppercase;
+  color: $white-text;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list > .footer__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-list > .footer__item:hover,
+.footer-list > .footer__item:focus {
+  background-color: $blue-text;
+}
+
+.footer-list--image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $white-text;
+  transition-property: fill;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.footer__item {
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $icon-foot-back;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.footer__form {
+  display: flex;
+  margin-left: 93px;
+}
+
+.footer__form--text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: $FontSize16;
+  line-height: $LineHeight30;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: $LetterSpacing06;
+  color: $white-text;
+  margin-right: 10px;
+}
+
+.footer__info--connect {
+  font-style: normal;
+  font-weight: bold;
+  font-size: $FontSize14;
+  line-height: $LineHeight16;
+  letter-spacing: $LetterSpacing03;
+  text-transform: uppercase;
+  color: $white-text;
+  margin-left: 93px;
+}
+
+.footer__form--button {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  background-color: $blue-text;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-property: backgraund-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $blue-text;
+    border-radius: 4px;
+  }
+}
+
+.footer__form--input {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $FontSize16;
+  line-height: $LineHeight20;
+  display: flex;
+  align-items: center;
+  letter-spacing: $LetterSpacing03;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-top: 20px;
+  color: $white-text;
+  background-color: $back-grey;
+  border: 1px solid $background-border;
+  border-radius: 4px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+  transition-property: backgraund-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
+  &:focus-within,
+  &:hover,
+  &:active {
+    border: 1px solid $blue-text;
+    border-radius: 4px;
+  }
+}
+
+.footer__form--icon {
+  fill: $white-text;
+}

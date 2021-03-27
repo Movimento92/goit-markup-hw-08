@@ -1,0 +1,124 @@
+.team {
+  background-color: $back-white-gray;
+  padding-top: 96px;
+  padding-bottom: 94px;
+}
+
+.team__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: $FontSize36;
+  line-height: $LineHeight42;
+  text-align: center;
+  letter-spacing: $LetterSpacing03;
+}
+
+.team__list {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.team__cart {
+  width: 270px;
+  background-color: $white-text;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.team__cart--content {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__cart--title {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: $FontSize16;
+  line-height: $LineHeight19;
+  text-align: center;
+  letter-spacing: $LetterSpacing03;
+  color: $black-text;
+  margin-bottom: 10px;
+}
+
+.team__cart--profession {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: $FontSize16;
+  line-height: $LineHeight19;
+  text-align: center;
+  letter-spacing: $LetterSpacing03;
+  color: $grey-text;
+}
+
+.social-network {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-between;
+  transition-property: fill, background-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.social-network__list {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .social-network__icon,
+  &:focus .social-network__icon {
+    fill: $white-text;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $checkbox__button;
+  }
+}
+
+.social-network__item {
+  margin-right: 0;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  transition-property: fill;
+  transition-duration: $time;
+  transition-timing-function: $cubic;
+}
+
+.social-network__icon {
+  fill: $clients;
+  padding-right: 0;
+}
