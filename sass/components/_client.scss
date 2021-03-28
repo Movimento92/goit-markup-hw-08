@@ -9,18 +9,23 @@
 }
 
 .clients__container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 480px;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .clients__title {
   font-style: normal;
   font-weight: bold;
-  font-size: $FontSize36;
-  line-height: $LineHeight42;
+  font-size: $FontSize28;
+  line-height: $LineHeight32;
   text-align: center;
   letter-spacing: $LetterSpacing03;
   margin-bottom: 50px;
@@ -36,6 +41,7 @@
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   text-align: center;
@@ -50,14 +56,6 @@
     text-align: center;
     flex-wrap: nowrap;
     fill: currentColor;
-  }
-
-  & :not(:last-of-type) {
-    margin-bottom: 0px;
-  }
-
-  & :not(:last-child) {
-    margin-right: 30px;
   }
 }
 
@@ -85,14 +83,14 @@
 
   &:active {
     fill: transparent;
-  }
 
-  @media (min-width: 768px) {
-    max-width: 226px;
-  }
-  @media (min-width: 1200px) {
-    width: 170px;
-    height: 90px;
+    @media (min-width: 768px) {
+      width: 226px;
+    }
+    @media (min-width: 1200px) {
+      width: 170px;
+      height: 90px;
+    }
   }
 }
 
@@ -100,27 +98,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 90px;
+  width: calc((100% - 30px) / 2);
   color: $clients;
   border-radius: 4px;
   margin-left: 0;
   cursor: pointer;
   margin-right: 30px;
-
-  width: calc((100% - 30px) / 2);
-  @media (min-width: 768px) {
-    width: calc((100% - 30px) / 3);
-    @media (min-width: 1200px) {
-      @include Flex(flex, center, center);
-      width: 170px;
-      height: 90px;
-    }
-  }
+  padding-bottom: 30px;
 
   &:last-child {
     margin-right: 0;
   }
+
+  @media (min-width: 768px) {
+    width: calc((100% - 20px) / 3);
+
+    height: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  @include Flex(flex, center, center);
+  width: 170px;
+  height: 90px;
 }
 
 .clients__svg {
